@@ -377,6 +377,12 @@ section.active {
         }
     }
 
+    @media screen and (max-width: 450px) {
+        html{
+            font-size: 50%;
+        }
+    }
+
     @media screen and (max-width: 400px) {
         .home-detail {
             text-align: center;
