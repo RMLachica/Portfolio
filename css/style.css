@@ -459,6 +459,14 @@ section.active {
         width: 35rem;
         height: 35rem;
     }
+
+    .achievements-container{
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-container .achievements-box:first-child{
+        order: 1;
+    }
 }
 
 @media screen and (max-width: 600px) {
