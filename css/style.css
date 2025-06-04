@@ -213,7 +213,7 @@ section.active {
     100%{
         transform: rotate(360deg);
     }
-}
+}   
 
 .home-img .img-box .img-item {
     position: relative;
@@ -247,13 +247,13 @@ section.active {
     color: var(--main-color);
 }
 
-.services-container {
+.skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 2rem;
 }
 
-.services-container .services-box {
+.skills-container .skills-box {
     padding: 2.5rem 2rem;
     background: var(--second-bg-color);
     border: .2rem solid var(--second-bg-color);
@@ -261,27 +261,27 @@ section.active {
     transition: .5s;
 }
 
-.services-container .services-box:hover {
+.skills-container .skills-box:hover {
     border-color: var(--main-color);
     transform: scale(1.02);
 }
 
-.services-box .icon {
+.skills-box .icon {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.services-box .icon i {
+.skills-box .icon i {
     font-size: 3rem ;
     transition: .5s;
 }
 
-.services-box:hover .icon :not(a i){
+.skills-box:hover .icon :not(a i){
     color: var(--main-color);
 }
 
-.services-box .icon a {
+.skills-box .icon a {
     display: inline-flex;
     background: var(--white-color);
     border-radius: 50%;
@@ -289,31 +289,121 @@ section.active {
     transition: .5s;
 }
 
-.services-box:hover .icon a {
+.skills-box:hover .icon a {
     background-color: var(--main-color);
 }
 
-.services-box .icon a i {
+.skills-box .icon a i {
     font-size: 2rem;
     color: var(--bg-color);
     transform: rotate(225deg);
 }
 
-.services-box .icon a:hover i{
+.skills-box .icon a:hover i{
     transform: rotate(180deg);
 }
 
-.services-box h3 {
+.skills-box h3 {
     font-size: 2rem;
     margin: .5rem 0 2rem;
 }
 
-.services-box:hover h3 {
+.skills-box:hover h3 {
     color: var(--main-color);
 }
 
-.services-box p {
+.skills-box p {
     font-size: 1.5rem;
+}
+
+.achievements-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.achievements-detail {
+    display: none;
+}   
+
+.achievements-detail.active{
+    display: block;
+}   
+
+.achievements-box .numb {
+    font-size: 8rem;
+    -webkit-text-stroke: .07rem var(--white-color);
+    color: transparent;
+    line-height: 1;
+}
+
+.achievements-box h3 {
+    font-size: 3.5rem;
+    margin: .8rem 0 2rem;
+}
+
+.achievements-box p {
+    font-size: 1.6rem;
+}
+
+.achievements-box .tech {
+    margin: 2rem 0;
+        color: var(--main-color);
+        border-bottom: .1rem solid var(--white-color);
+        padding-bottom: 2rem;
+}
+
+.achievements-box .achievements-carousel {
+    width: 100%;
+    height: 45rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.achievements-carousel .img-slide {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: 2rem;
+    height: inherit;
+    transition: .5s;
+}
+
+.achievements-carousel .img-item {
+    height: inherit;
+}
+
+.achievements-carousel .img-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.achievements-box .navigation {
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.achievements-box .navigation button {
+    display: inline-flex;
+    padding: .4rem;
+    background: var(--second-bg-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    font-size: 4rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.achievements-box .navigation button.disabled{
+    border-color: var(--second-bg-color);
+    color: var(--disabled-color);
+}
+
+.achievements-box .navigation .arrow-right {
+    margin-left: 1.5rem;
 }
 
 @media screen and (max-width: 1200px) {
